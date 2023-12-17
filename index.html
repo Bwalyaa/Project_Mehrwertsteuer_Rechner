@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -15,17 +16,14 @@
 
             <div class="div1">
                 <h2>Was soll berechnet werden ?</h2>
-                <input type="radio" name="radio" id="aufschlag" value="aufschlag">
-                <label for="aufschlag">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label><br>
-                <input type="radio" name="radio" id="abziehen" value="abziehen">
+                <input type="radio" name="calculationType" id="aufschlag" value="aufschlag">                <label for="aufschlag">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label><br>
+                <input type="radio" name="calculationType" id="abziehen" value="abziehen">
                 <label for="abziehen">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
                 
             <div class="div2">
                 <h2>Mehrwertsteuersatz</h2>
-                <input type="radio" name="radio" id="nineteenPercent" value="nineteenPercent">
-                <label for="nineteenPercent">19%</label><br>
-                <input type="radio" name="radio" id="sevenPercent" value="sevenPercent">
-                <label for="sevenPercent">7%</label>
+                <input type="radio" name="mehrwertsteuersatz" id="nineteenPercent" value="nineteenPercent">                <label for="nineteenPercent">19%</label><br>
+                <input type="radio" name="mehrwertsteuersatz" id="sevenPercent" value="sevenPercent">                <label for="sevenPercent">7%</label>
             </div>
 
             <div class="div3">
@@ -36,8 +34,15 @@
             <button type="button" onclick="goCalculate(); return false">Berechnen</button>
 
             <h3>Ergebnis</h3>
+            <div class="mehrwertbetrag">
+            <h4>Mehrwertsteuerbetrag <br>€</h4>
             <p class="resultTaxCosts"></p>
+            </div>
+
+            <div class="bruttobetrag">
+            <h4>Bruttobetrag (Endpreis) <br>€</h4>
             <p class="resultBruttoCosts"></p>
+            </div>
     </form>
 
     <script src="./assets/js/main.js"></script>
